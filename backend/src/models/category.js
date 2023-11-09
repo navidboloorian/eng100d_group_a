@@ -7,4 +7,4 @@ const categorySchema = Schema({
     jobs: {typee: Array, default: []},
 });
 
-export default model("Category", questionSchema);
+export default model("Category", categorySchema);
