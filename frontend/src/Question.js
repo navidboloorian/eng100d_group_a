@@ -1,5 +1,10 @@
 import "./Question.css"
 
+// class Question {
+
+//     answer; 
+    
+// }
 function Question({question}) {
 
     return (
@@ -8,28 +13,30 @@ function Question({question}) {
             <div className="QuestionButtonRow">
                 <div className="QuestionButtonColumn"> 
                     <button className="QuestionButton"> </button>
-                    <p>Strongly Disagree</p>
+                    <p className="QuestionButtonText">Strongly Disagree</p>
                 </div>
                 <div className="QuestionButtonColumn"> 
                     <button className="QuestionButton"> </button>
-                    <p>Disagree</p>
+                    <p className="QuestionButtonText">Disagree</p>
                 </div>
                 <div className="QuestionButtonColumn"> 
                     <button className="QuestionButton"> </button>
-                    <p>Neutral</p>
+                    <p className="QuestionButtonText">Neutral</p>
                 </div>
                 <div className="QuestionButtonColumn"> 
                     <button className="QuestionButton"> </button>
-                    <p>Agree</p>
+                    <p className="QuestionButtonText">Agree</p>
                 </div>
                 <div className="QuestionButtonColumn"> 
                     <button className="QuestionButton"> </button>
-                    <p>Strongly Agree</p>
+                    <p className="QuestionButtonText">Strongly Agree</p>
                 </div>
 
             </div>
         </div>
     );
 }
+
+
 
 export default Question

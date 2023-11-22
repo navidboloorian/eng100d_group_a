@@ -1,21 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap');
 
-
 .Question {
     margin-top: 5px;
     margin-bottom: 5px;
     display: grid;
 }
-
+/* Row of Buttons with labels below */ 
 .QuestionButtonRow {
+    align-content: center;
+    /* background-color: red; */
     align-self: center;
     display: grid;
     grid-template-columns: 10% 10% 10% 10% 10%;
+    justify-content: center;
 }
-
+/* Contains button and label below */
 .QuestionButtonColumn {
     display: grid;
-    grid-template-columns: 50% 50%;
+    /* align-items: center; */
+    /* justify-items: center; */
+    grid-template-rows: 50% 50%;
+}
+.QuestionButton {
+    /* /* min-width: 10%; */
+    max-width: 40%;
+    min-width: 40%;
+    /* width: 20%;
+    height:50%; */
+    min-height: 20px;
+    background-color: #942C60;
+    border-radius: 50%;
+}
+.QuestionButtonText {
+    font-family: 'Inter', sans-serif;
+    color: #942C60;
 }
 
 .QuestionText {
@@ -26,9 +44,5 @@
     padding-top: 5px;
 }
 
-.QuestionButton {
 
-    background-color: #942C60;
-    border-radius: 40%
-}
 

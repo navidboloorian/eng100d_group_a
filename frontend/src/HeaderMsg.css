@@ -15,5 +15,6 @@
     margin-right: 5%;
     text-align: center;
     justify-self: center;
+    text-wrap: nowrap;
 
 }
