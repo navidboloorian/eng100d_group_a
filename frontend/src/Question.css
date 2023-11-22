@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap');
+
+
+.Question {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: grid;
+}
+
+.QuestionButtonRow {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10%;
+}
+
+.QuestionButtonColumn {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.QuestionText {
+
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.QuestionButton {
+
+    background-color: #942C60;
+    border-radius: 40%
+}
+
