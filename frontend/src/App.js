@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import HeaderMsg from './HeaderMsg';
 import Question from "./Question";
@@ -7,6 +6,7 @@ import NavButton from './NavButton';
 function App() {
   return (
     <>
+
         <div className='GridContainer'> 
           <div className="PageIntro"> 
             <HeaderMsg/>
@@ -22,7 +22,7 @@ function App() {
           </div>
           <div className='BottomNavButtons'> 
             <NavButton label={"BACK"} side={"LEFT"}/>
-            <NavButton label={"NEXT"}side={"RIGHT"}/>
+            <NavButton label={"NEXT"} side={"RIGHT"}/>
           </div>
         </div>
     </>
