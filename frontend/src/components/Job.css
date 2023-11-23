@@ -1,0 +1,81 @@
+.job-wrapper {
+    width: 900px;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.job-header {
+    width: 100%;
+    padding: 10px 5px;
+    display: grid;
+    grid-template-columns: 30px calc(100% - 30px);
+    align-items: center;
+}
+
+.job-header:hover {
+    cursor: pointer;
+}
+
+.job-header h2 {
+    margin: 0px;
+}
+
+.job-header img {
+    width: 30px;
+    transition: all 0.2s ease-in;
+}
+
+.job-info {
+    max-height: 500px;
+    padding: 10px 5px;
+    margin-left: 30px;
+    transition: all 0.1s ease-in;
+    transition: all 0.1s ease-out;
+}
+
+.job-info p {
+    margin: 0px;
+    font-weight: normal;
+}
+
+.hidden {
+    max-height: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    overflow: hidden;
+}
+
+.collapsed {
+    transform: rotate(0deg);
+}
+
+.expanded {
+    transform: rotate(90deg);
+}
+
+#retake-button {
+    margin-top: 20px;
+    justify-self: center;
+    width: 180px;
+    background-color: var(--yellow);
+    border: 0px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+#retake-button:hover {
+    cursor: pointer;
+}
+
+.high-percentage {
+    color: green;
+}
+
+.medium-percentage {
+    color: orange;
+}
+
+.low-percentage {
+    color: red;
+}

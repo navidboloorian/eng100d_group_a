@@ -1,0 +1,50 @@
+.question-button-wrapper {
+    display: grid;
+    justify-content: center;
+}
+
+.question-button-wrapper p {
+    text-align: center;
+}
+
+.question-button {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 0px;
+    justify-self: center;
+}
+
+.question-button:hover {
+    background-color: var(--yellow);
+    cursor: pointer;
+}
+
+.bounding-box {
+    height: 90px;
+    display: grid;
+    align-items: center;
+}
+
+.small {
+    height: 50px;
+    width: 50px;
+}
+
+.medium {
+    height: 70px;
+    width: 70px;
+}
+
+.large {
+    height: 90px;
+    width: 90px;
+}
+
+.unselected {
+    background-color: var(--purple);
+}
+
+.selected {
+    background-color: var(--yellow);
+}

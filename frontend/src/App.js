@@ -1,32 +1,93 @@
 import './App.css';
-import HeaderMsg from './HeaderMsg';
-import Question from "./Question";
-import NavButton from './NavButton';
+import Question from './components/Question';
+import { useState, useEffect } from 'react';
+import Pagination from './components/Pagination';
+import questionList from './data/questionList';
+import jobList from './data/jobList';
+import Navbar from './components/Navbar';
+import Job from './components/Job';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(0);
+  const numPages = Math.ceil(questionList.length / 4);
+  const [quizFinished, setQuizFinished] = useState(false);
+  const [jobMatchPercentages, setJobMatchPercentages] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem('questions', JSON.stringify(questionList)); 
+  }, []);
+
+  useEffect(() => {
+    if(quizFinished) {
+      const jobQuestionCount = {};
+      const responses = JSON.parse(localStorage.getItem('questions'));
+      const calculations = {};
+      const tempJobMatchPercentages = [];
+
+      for(const job of jobList) {
+        calculations[job.title] = 0;
+        jobQuestionCount[job.title] = 0;
+      }
+
+      for(const question of responses) {
+        for(const job of question.jobs) {
+          calculations[job] += question.response;
+          jobQuestionCount[job]++;
+        }
+      }
+
+      for(const key in calculations) {
+        calculations[key] = calculations[key] / (jobQuestionCount[key] * 4);
+        tempJobMatchPercentages.push([key, calculations[key]]);
+      }
+
+      tempJobMatchPercentages.sort((a, b) => b[1] - a[1]);
+
+      setJobMatchPercentages(tempJobMatchPercentages);
+    }
+
+  }, [quizFinished]);
+
+  const resetFunction = () => {
+    setQuizFinished(false);
+    setCurrentPage(0);
+    localStorage.setItem('questions', JSON.stringify(questionList)); 
+  }
+
   return (
-    <>
+    quizFinished ? 
+      <>
+        <Navbar />
+        <div className='content'>
+          {
+            jobMatchPercentages.map((matchedJob, key) => {
+              let job;
 
-        <div className='GridContainer'> 
-          <div className="PageIntro"> 
-            <HeaderMsg/>
-          </div>
-          <div className="Question">
-            <Question question={"I like css"}/>
-            <Question question={"I like variable types"}/>
-            <Question question={"I forget to type semicolons"}/>
-            <Question question={"Q4"}/>
-            <Question question={"Q5"}/>
-            <Question question={"Q6"}/>
-            <Question question={"Q7"}/>
-          </div>
-          <div className='BottomNavButtons'> 
-            <NavButton label={"BACK"} side={"LEFT"}/>
-            <NavButton label={"NEXT"} side={"RIGHT"}/>
-          </div>
+              for(const tempJob of jobList) {
+                if(tempJob.title === matchedJob[0]) {
+                  job = tempJob;
+                  break;
+                }
+              }
+
+              return <Job key={key} job={job} percentMatch={matchedJob[1]} />
+            })
+          }
+          <button id="retake-button" onClick={() => resetFunction()}>Take the Quiz Again</button>
         </div>
-    </>
-
+      </>
+      :
+      <>
+        <Navbar />
+        <div className='content'>
+          {
+            questionList
+              .slice(currentPage * 4, Math.min(questionList.length, 4 + currentPage * 4))
+              .map((question, key) => <Question key={key} question={question} questionIndex={key + 4 * currentPage} />)
+          }
+          <Pagination numPages={numPages} currentPage={currentPage} setCurrentPage={setCurrentPage} setQuizFinished={setQuizFinished} />
+        </div>
+      </>
   );
 }
 

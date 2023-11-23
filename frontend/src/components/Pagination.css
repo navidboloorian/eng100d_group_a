@@ -1,0 +1,27 @@
+#pagination-buttons {
+    position: relative;
+    width: 900px;
+    height: 40px;
+}
+
+#pagination-buttons button {
+    background-color: var(--yellow);
+    border: 0px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+#pagination-buttons button:hover {
+    cursor: pointer;
+}
+
+#previous-button {
+    position: absolute;
+    left: 0;
+}
+
+#next-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
