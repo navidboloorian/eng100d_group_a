@@ -1,0 +1,8 @@
+{
+  "short_name": "GTN Quiz",
+  "name": "Global Talent Network Career Quiz",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}
