@@ -80,7 +80,7 @@ function App() {
       :
       <>
         <Navbar />
-        <HeaderMessage/>
+        {currentPage===0 ? <HeaderMessage/> : null}
         <div className='content'>
           {
             questionList
