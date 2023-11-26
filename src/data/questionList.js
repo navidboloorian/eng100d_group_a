@@ -16,6 +16,11 @@ const questionList = [
         response: 2,
     },
     {
+        text: 'I am good at debugging and fixing issues.',
+        jobs: ['Software Engineering', 'Embedded Systems', 'Web Development'],
+        response: 2,
+    },
+    {
         text: 'I am interested in learning different programming languages.',
         jobs: ['Software Engineering', 'Web Development'],
         response: 2,
@@ -57,6 +62,11 @@ const questionList = [
     },
     {
         text: 'I am interested in system-level programming.',
+        jobs: ['Embedded Systems'],
+        response: 2,
+    },
+    {
+        text: 'I enjoy problem-solving at both the hardware and software levels.',
         jobs: ['Embedded Systems'],
         response: 2,
     },
