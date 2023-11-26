@@ -1,4 +1,3 @@
-import './App.css';
 import Question from './components/Question';
 import { useState, useEffect } from 'react';
 import Pagination from './components/Pagination';
@@ -15,7 +14,7 @@ function App() {
   const [jobMatchPercentages, setJobMatchPercentages] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem('questions', JSON.stringify(questionList)); 
+    localStorage.setItem('questions', JSON.stringify(questionList));
   }, []);
 
   useEffect(() => {
@@ -80,7 +79,7 @@ function App() {
       :
       <>
         <Navbar />
-        {currentPage===0 ? <HeaderMessage/> : null}
+        <HeaderMessage/>
         <div className='content'>
           {
             questionList

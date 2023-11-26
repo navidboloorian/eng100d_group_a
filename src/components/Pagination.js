@@ -22,7 +22,7 @@ const Pagination = ({setCurrentPage, currentPage, numPages, setQuizFinished}) =>
                 currentPage !== numPages - 1 ? 
                     <button id="next-button" onClick={() => goToPage(1)}>Next</button> 
                     : 
-                    <button id="next-button" onClick={() => setQuizFinished(true)}>Finish</button> 
+                    <button id="next-button" onClick={() => setQuizFinished(true) }>Finish</button> 
             }
         </div>
     );
