@@ -33,9 +33,11 @@ const Job = ({job, percentMatch}) => {
                 <h2>{job.title} - <span className={percentMatchClassString}>{parseInt(percentMatch * 100)}%</span></h2>
             </div>
             <div className={jobInfoClassString}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in feugiat lectus. In vitae justo in tortor molestie vestibulum. Vivamus bibendum massa vitae sapien porttitor, nec sollicitudin turpis varius. In feugiat ac quam in tristique. Donec facilisis nisl odio, et malesuada nibh fringilla non. Curabitur ligula sapien, pharetra id vestibulum ac, condimentum nec diam. Integer purus nisi, finibus nec velit nec, sagittis pretium elit. </p>
+                <p>{job.description}</p>
+                <br />
+                <p><strong>Next steps and resources:</strong></p>
                 <ul>
-                    {job.nextSteps.map((step, key) => <li key={key}>{step}</li>)}
+                    {job.nextStepsText.map((step, key) => <li key={key}><a href={job.nextStepsUrl[key]} rel="noreferrer" target="_blank">{step}</a></li>)}
                 </ul>
             </div>
         </div>
