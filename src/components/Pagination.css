@@ -6,7 +6,7 @@
 
 #pagination-buttons button {
     background-color: var(--yellow);
-    border: 0px;
+    border: 1px solid black;
     padding: 5px 10px;
     font-weight: bold;
 }
