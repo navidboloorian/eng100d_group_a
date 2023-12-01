@@ -1,0 +1,35 @@
+#bar-wrapper {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#bar-background {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    height: 20px;
+    border: 1px solid black;
+}
+
+#bar-foreground {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    background-color: var(--purple);
+    border: 1px solid black;
+}
+
+#bar-wrapper p {
+    z-index: 2;
+    display: absolute;
+    margin: 0 auto;
+    color: var(--yellow);
+}

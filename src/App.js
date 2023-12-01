@@ -5,7 +5,8 @@ import questionList from './data/questionList';
 import jobList from './data/jobList';
 import Navbar from './components/Navbar';
 import Job from './components/Job';
-import HeaderMessage from "./components/HeaderMsg"
+import HeaderMessage from "./components/HeaderMsg";
+import ProgressBar from './components/ProgressBar';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -80,6 +81,7 @@ function App() {
       <>
         <Navbar />
         <HeaderMessage/>
+        <ProgressBar progress={currentPage / numPages} />
         <div className='content'>
           {
             questionList
