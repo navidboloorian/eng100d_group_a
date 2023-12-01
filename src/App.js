@@ -6,7 +6,9 @@ import jobList from './data/jobList';
 import Navbar from './components/Navbar';
 import Job from './components/Job';
 import HeaderMessage from "./components/HeaderMsg";
+import EndHeader from './components/EndHeader';
 import ProgressBar from './components/ProgressBar';
+import "./components/HeaderMsg.css";
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -59,7 +61,10 @@ function App() {
     quizFinished ? 
       <>
         <Navbar />
+        <EndHeader/>
         <div className='content'>
+          <p style={{textAlign: 'center'}}>Based on your answers, you should consider a career in {String(jobMatchPercentages[0]).replace(/[^a-zA-Z ]/g, '')}! </p>
+          <p style={{textAlign: 'center'}}>Click on the career title to learn more about the career.</p>
           {
             jobMatchPercentages.map((matchedJob, key) => {
               let job;
