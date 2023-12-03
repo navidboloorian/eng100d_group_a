@@ -57,12 +57,16 @@ function App() {
     localStorage.setItem('questions', JSON.stringify(questionList)); 
   }
 
+  console.log(jobMatchPercentages);
+
   return (
     quizFinished ? 
       <>
         <Navbar />
         <EndHeader/>
         <div className='content'>
+          <p style={{textAlign: 'center'}}>Based on your answers, you should consider a career in {jobMatchPercentages[0][0]}! </p>
+          <p style={{textAlign: 'center'}}>Click on the career title to learn more about the career.</p>
           {
             jobMatchPercentages.map((matchedJob, key) => {
               let job;
