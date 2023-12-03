@@ -63,8 +63,6 @@ function App() {
         <Navbar />
         <EndHeader/>
         <div className='content'>
-          <p style={{textAlign: 'center'}}>Based on your answers, you should consider a career in {String(jobMatchPercentages[0]).replace(/[^a-zA-Z ]/g, '')}! </p>
-          <p style={{textAlign: 'center'}}>Click on the career title to learn more about the career.</p>
           {
             jobMatchPercentages.map((matchedJob, key) => {
               let job;

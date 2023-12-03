@@ -5,10 +5,10 @@ function HeaderMsg() {
 
 
     return (
-      <h1 className="HeaderText content"> 
-        Welcome to Global Talent Network’s Career Questionnaire.<br />
+      <div className="HeaderText content"> 
+        Welcome to Global Talent Lab's Career Questionnaire.<br />
         Take the next 15 minutes to answer the {questionList.length} questions to be matched with potential careers!
-      </h1>
+      </div>
     );
 
 }

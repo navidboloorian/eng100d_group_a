@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap');
-
 .HeaderText {
-
     font-family: 'Merriweather Sans';
     font-size: smaller;
     color: black; 
@@ -9,11 +6,9 @@
 
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
     text-align: center;
     justify-self: center;
     text-wrap: nowrap;
-    margin-top: 10px;
+    margin-top: 20px;
     border: 1px solid black;
 }

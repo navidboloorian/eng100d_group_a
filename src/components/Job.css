@@ -59,9 +59,9 @@
     justify-self: center;
     width: 180px;
     background-color: var(--yellow);
-    border: 0px;
     padding: 5px 10px;
     font-weight: bold;
+    border: 1px solid black;
 }
 
 #retake-button:hover {
